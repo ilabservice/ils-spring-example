@@ -1,0 +1,66 @@
+server:
+  port: 9999
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.ilabservice.intelab.video.model
+  #typeEnumsPackage: com.ilabservice.intelab.model.enums
+  global-config:
+    # 自动刷新Mapper对应的XML文件
+    refresh: true
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      # 主键类型 0:数据库ID自增 1.未定义 2.用户输入 3 id_worker 4.uuid 5.id_worker字符串表示
+      id-type: AUTO
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: NOT_EMPTY
+      # 默认数据库表下划线命名
+      table-underline: true
+      # 逻辑删除配置
+      # 逻辑删除全局值（1表示已删除，这也是Mybatis Plus的默认配置）
+      # sqlInjector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+      #logic-delete-value: 1
+      # 逻辑未删除全局值（0表示未删除，这也是Mybatis Plus的默认配置）
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    name: ilsexample
+    url: jdbc:mysql://localhost:3306/ilsexample?useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8
+    username: root
+    password: root1234
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    initialize: false
+  jpa:
+    hibernate:
+      show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  application:
+    name: ils-example-service
+
+
+runtime:
+  debug: true

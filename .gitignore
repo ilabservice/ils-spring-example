@@ -4,6 +4,26 @@
 # Log file
 *.log
 
+# Intellij
+**/.idea
+*.iml
+*.iws
+*.factorypath
+
+
+# Eclipse
+*.classpath
+*.project
+.settings/
+
+# Mac
+.DS_Store
+
+# Maven
+**/log/
+**/target/
+**/logs/
+
 # BlueJ files
 *.ctxt
 

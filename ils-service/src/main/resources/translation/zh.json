@@ -1,0 +1,8 @@
+{
+  "DATABASE_ERROR": "数据库失败",
+  "DB_INSERT_ERROR": "数据库添加操作失败",
+  "DB_UPDATE_ERROR": "数据库修改操作失败",
+  "DB_DELETE_ERROR": "数据库删除操作失败",
+
+  "INTERNAL_SERVER_ERROR": "服务器故障"
+}

@@ -1,0 +1,8 @@
+{
+  "DATABASE_ERROR": "database error",
+  "DB_INSERT_ERROR": "database insert error",
+  "DB_UPDATE_ERROR": "database update error",
+  "DB_DELETE_ERROR": "database delete error",
+
+  "INTERNAL_SERVER_ERROR": "server failure"
+}
