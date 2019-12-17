@@ -18,3 +18,8 @@
 * controller 类的定义
 * controller 方法的定义, 包括接口描述, 入参, 返回值
 * model 已经 VO 里的类, 只要是会被作为返回值, 就需要用 swagger 的注释来解释.
+
+## 数据库脚本
+* 数据库脚本都在 resource 的 db_migration 中, 只要一个微服务有自己独立的数据库.
+* 其中 bootstrap 里包括完成的表单定义
+* 其中 migration 里按照月份来放该月 release 中数据库的更改脚本. 每个脚本的名字格式为 001.sql, 002.sql, 类推. 
